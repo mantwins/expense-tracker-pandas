@@ -19,11 +19,11 @@ def main():
     # Sum the Amount column, grouped by Category, sorted highest first
     totals_by_category = df.groupby("Category")["Amount"].sum().sort_values(ascending=False)
 
-    print("Έξοδα ανά κατηγορία:\n")
+    print("Expenses by Category:\n")
     for category, total in totals_by_category.items():
         print(f"  {category:<15} €{total:.2f}")
 
-    print(f"\nΣύνολο: €{df['Amount'].sum():.2f}")
+    print(f"\nTotal: €{df['Amount'].sum():.2f}")
 
 
 if __name__ == "__main__":
