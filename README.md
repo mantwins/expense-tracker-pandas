@@ -1,22 +1,23 @@
 expense-tracker-pandas
+Simple expense tracking script using Python and Pandas.
 
 Reads a CSV of personal expenses and tells you how much you spent per category. That's it - no dashboard, no database, just a quick way to see where the money went.
 
 Setup
-bash
-pip install -r requirements.txt
+Bash
+pip install pandas
 python main.py
 CSV format
-
 Needs at least Category and Amount columns. Date and Description are there in the sample file but not required for the script to work:
 
+Απόσπασμα κώδικα
 Date,Category,Amount,Description
 2026-01-05,Food,25.50,Supermarket
 2026-01-06,Transport,10.00,Bus ticket
-
 Swap in your own expenses.csv with the same columns and it'll work the same way.
 
 Output
+Plaintext
 Έξοδα ανά κατηγορία:
 
   Utilities       €95.00
@@ -26,5 +27,4 @@ Output
 
 Σύνολο: €253.45
 Stack
-
 Python + Pandas. One groupby().sum() call is doing basically all the work here.
